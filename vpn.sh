@@ -1,4 +1,4 @@
-#!/bin.bash
+#!/bin/bash
 
 #chcek is a user is root
 checksudo(){
