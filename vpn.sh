@@ -10,8 +10,6 @@ checksudo(){
         fi
  }
 
-
-
 REQUIRED_PKG="openvpn"
 PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
 echo Checking for $REQUIRED_PKG: $PKG_OK
@@ -19,10 +17,6 @@ if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
    sudo apt-get --yes install $REQUIRED_PKG
    fi
-
-
-
-
 
 read -p " do you want to connect or disconnect from VPN (C/D)  " choice
 
@@ -43,7 +37,5 @@ elif [[ $choice == "d" || $choice == "D" ]]; then
     echo "Successfully disconnected"
 
 else
-
 echo "not a right option"
-
 fi
