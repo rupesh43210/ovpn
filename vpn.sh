@@ -29,7 +29,7 @@ read -p " do you want to connect or disconnect from VPN (C/D)  " choice
 if [[ $choice == "C" || $choice == "c" ]]; then
      currentdirectory=$(pwd)
      echo "your current working dorectory is " $currentdirectory
-    read -p " Please give the location of your openvpn configuration file in the format  /xyz.ovpn  " location
+    read -p " Provide path to ovpn file  " location
 
     sudo openvpn $location &
     ip a | grep tun0
